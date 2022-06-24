@@ -1,0 +1,21 @@
+<!-- <div id="search-component">
+  <label for="search-box">Hero Search</label>
+  <input #searchBox id="search-box" class="search" />
+  <ul class="search-result">
+    <li>
+      <a routerLink="/detail/"> </a>
+    </li>
+  </ul>
+</div> -->
+<div class="input-group" id="search-component">
+    <span class="input-group-text" id="basic-addon1">
+        <svg [cIcon]="icons.cilSearch" size="sm" title="List Icon"></svg>
+    </span>
+    <input 
+    type="text" 
+    class="form-control" 
+    placeholder="Username" 
+    aria-label="Username"  
+    #searchBox 
+    id="search-box">
+</div>

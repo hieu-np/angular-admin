@@ -1,0 +1,108 @@
+<div class="row user-list" >
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+      <c-card [cBorder]="{ top: { color: 'warning', width: 3 } }" class="mb-3">
+        <c-card-header class="user-list-title">
+          <div><h4 class="heading-color">User Info</h4></div>
+          <button cButton color="danger" routerLink="/">User List</button>
+        </c-card-header>
+        <c-card-body>
+  
+            <form [gutter]="3" novalidate cForm cRow class="needs-validation" *ngIf="user" (ngSubmit)="save()">
+                <c-col [md]="4">
+                  <label cLabel for="txtName">Name</label>
+                  <input
+                    cFormControl
+                    id="txtName"
+                    name="txtName"
+                    required
+                    type="text"
+                    placeholder="Harry"
+                    [(ngModel)]="user.name"
+                  />
+                  <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                </c-col>
+                <c-col [md]="4">
+                  <label cLabel for="txtPhone">Phone Number (+84)</label>
+                  <input
+                    cFormControl
+                    id="txtPhone"
+                    name="txtPhone"
+                    required
+                    type="text"
+                    placeholder="909909503"
+                    [(ngModel)]="user.phone"
+                    
+                  />
+                  <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                </c-col>
+                <c-col [md]="4">
+                  <label cLabel for="txtEmail">Email</label>
+                  <c-input-group class="has-validation">
+                    <span cInputGroupText id="inputGroupPrepend">@</span>
+                    <input
+                      aria-describedby="inputGroupPrepend"
+                      cFormControl
+                      id="txtEmail"
+                      name="txtEmail"
+                      required
+                      placeholder="harry@gmail.com"
+                      type="email"
+                      [(ngModel)]="user.email"
+                    />
+                    <c-form-feedback [valid]="false"
+                      >Please choose a username.</c-form-feedback
+                    >
+                  </c-input-group>
+                </c-col>
+                <c-col [md]="6">
+                  <label cLabel for="txtAddress">Address</label>
+                  <input
+                    cFormControl
+                    id="txtAddress"
+                    name="txtAddress"
+                    required
+                    type="text"
+                    placeholder="Ho Chi Minh"
+                    [(ngModel)]="user.address"
+                  />
+                  <c-form-feedback [valid]="false"
+                    >Please provide a valid city.</c-form-feedback
+                  >
+                </c-col>
+                <c-col [md]="3">
+                  <label cLabel for="txtAge">Age</label>
+                  <input
+                    cFormControl
+                    id="txtAge"
+                    name="txtAge"
+                    required
+                    type="text"
+                    placeholder="26"
+                    [(ngModel)]="user.age"
+                  />
+                  <c-form-feedback [valid]="false"
+                    >Please provide a valid State.</c-form-feedback
+                  >
+                </c-col>
+                <c-col [md]="3">
+                  <label cLabel for="sltAdmin">Admin</label>
+                  <select id="sltAdmin" name="sltAdmin" aria-label="Default select example" cSelect [(ngModel)]="user.admin">
+                    <option value=0>No</option>
+                    <option value=1>Yes</option>
+                  </select>
+                  <c-form-feedback [valid]="false"
+                    >Please provide a valid zip.</c-form-feedback
+                  >
+                </c-col>
+                <c-col [xs]="12">
+                  <button cButton class="me-1" color="primary" type="submit">
+                    Update Info
+                  </button>
+                </c-col>
+              </form>
+  
+        </c-card-body>
+      </c-card>
+    </div>
+  </div>
+  

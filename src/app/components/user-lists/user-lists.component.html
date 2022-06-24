@@ -1,0 +1,59 @@
+<div class="row user-list">
+  <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">
+    <c-card [cBorder]="{ top: { color: 'dark', width: 3 } }" class="mb-3">
+      <c-card-header class="user-list-title">
+        <div><h4 class="heading-color">User Lists</h4></div>
+        <app-search-user></app-search-user>
+        <button cButton color="success" routerLink="/add">Add User</button>
+      </c-card-header>
+      <c-card-body>
+        <div class="table-over-scroll">
+          <table cTable>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col" class="text-center">User Id</th>
+                <th scope="col" class="hidden-is-small-md text-center">Age</th>
+                <th scope="col" class="hidden-is-small-s">Phone</th>
+                <th scope="col" class="hidden-is-small-sm">Email</th>
+                <th scope="col" class="hidden-is-small-md">Address</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users; let i = index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ user.name }}</td>
+                <td class="text-center">{{ user.id }}</td>
+                <td class="hidden-is-small-md text-center">{{ user.age }}</td>
+                <td class="hidden-is-small-s">+84{{ user.phone }}</td>
+                <td class="hidden-is-small-sm">{{ user.email }}</td>
+                <td class="hidden-is-small-md">{{ user.address }}</td>
+                <!-- <td [class.text_admin_user]="user.admin == 1">
+                  {{ user.admin == 1 ? "Admin" : "Normal" }}
+                </td> -->
+                <td [class.text_admin_user]="user.id == 5">
+                  {{ user.id == 5 ? "Admin" : "Normal" }}
+                </td>
+                <td>
+                  <c-badge color="warning" routerLink="/edit" [queryParams]="{ id: user.id}">
+                    <svg
+                      [cIcon]="icons.cilOptions"
+                      size="sm"
+                      title="List Icon"
+                    ></svg>
+                  </c-badge>
+                  <c-badge color="danger" (click)="onDeleteUser(user)">
+                    <svg [cIcon]="icons.cilX" size="sm" title="List Icon"></svg>
+                  </c-badge>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </c-card-body>
+    </c-card>
+  </div>
+</div>

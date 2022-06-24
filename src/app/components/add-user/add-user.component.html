@@ -1,0 +1,15 @@
+<div class="row user-list">
+  <div class="col col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+    <c-card [cBorder]="{ top: { color: 'success', width: 3 } }" class="mb-3">
+      <c-card-header class="user-list-title">
+        <div><h4 class="heading-color">Add User</h4></div>
+        <button cButton color="danger" routerLink="/">Cancel</button>
+      </c-card-header>
+      <c-card-body>
+
+        <app-form-add-user (onAddUser)="addUser($event)"></app-form-add-user>
+
+      </c-card-body>
+    </c-card>
+  </div>
+</div>

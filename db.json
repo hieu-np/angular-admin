@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Mark",
+      "age": 25,
+      "phone": 909567890,
+      "email": "mark@gmail.com",
+      "address": "Ho Chi Minh",
+      "admin": 0
+    },
+    {
+      "id": 2,
+      "name": "Tom",
+      "age": 20,
+      "phone": 909565324,
+      "email": "tom@gmail.com",
+      "address": "Ha Noi",
+      "admin": 0
+    },
+    {
+      "id": 3,
+      "name": "Conan",
+      "age": 30,
+      "phone": 909567682,
+      "email": "conan@gmail.com",
+      "address": "Can Tho",
+      "admin": 0
+    },
+    {
+      "id": 4,
+      "name": "Alex",
+      "age": 28,
+      "phone": 355013350,
+      "email": "alex@gmail.com",
+      "address": "Nghe An",
+      "admin": 0
+    },
+    {
+      "id": 5,
+      "name": "Sunny",
+      "age": 18,
+      "phone": 373086262,
+      "email": "sunny@gmail.com",
+      "address": "Vinh Long",
+      "admin": 1
+    },
+    {
+      "id": 6,
+      "name": "Chinsu",
+      "age": 30,
+      "phone": 909567546,
+      "email": "chinsu@gmail.com",
+      "address": "Ha Nam",
+      "admin": 0
+    }
+  ]
+}

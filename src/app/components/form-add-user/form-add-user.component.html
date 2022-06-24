@@ -1,0 +1,94 @@
+<form [gutter]="3" novalidate cForm cRow class="needs-validation" (ngSubmit)="onSubmit()">
+    <c-col [md]="4">
+      <label cLabel for="txtName">Name</label>
+      <input
+        cFormControl
+        id="txtName"
+        name="txtName"
+        required
+        type="text"
+        placeholder="Harry"
+        [(ngModel)]="txtName"
+      />
+      <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+    </c-col>
+    <c-col [md]="4">
+      <label cLabel for="txtPhone">Phone Number (+84)</label>
+      <input
+        cFormControl
+        id="txtPhone"
+        name="txtPhone"
+        required
+        type="text"
+        placeholder="909909503"
+        [(ngModel)]="txtPhone"
+        
+      />
+      <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+    </c-col>
+    <c-col [md]="4">
+      <label cLabel for="txtEmail">Email</label>
+      <c-input-group class="has-validation">
+        <span cInputGroupText id="inputGroupPrepend">@</span>
+        <input
+          aria-describedby="inputGroupPrepend"
+          cFormControl
+          id="txtEmail"
+          name="txtEmail"
+          required
+          placeholder="harry@gmail.com"
+          type="email"
+          [(ngModel)]="txtEmail"
+        />
+        <c-form-feedback [valid]="false"
+          >Please choose a username.</c-form-feedback
+        >
+      </c-input-group>
+    </c-col>
+    <c-col [md]="6">
+      <label cLabel for="txtAddress">Address</label>
+      <input
+        cFormControl
+        id="txtAddress"
+        name="txtAddress"
+        required
+        type="text"
+        placeholder="Ho Chi Minh"
+        [(ngModel)]="txtAddress"
+      />
+      <c-form-feedback [valid]="false"
+        >Please provide a valid city.</c-form-feedback
+      >
+    </c-col>
+    <c-col [md]="3">
+      <label cLabel for="txtAge">Age</label>
+      <input
+        cFormControl
+        id="txtAge"
+        name="txtAge"
+        required
+        type="text"
+        placeholder="26"
+        [(ngModel)]="txtAge"
+      />
+      <c-form-feedback [valid]="false"
+        >Please provide a valid State.</c-form-feedback
+      >
+    </c-col>
+    <c-col [md]="3">
+      <label cLabel for="sltAdmin">Admin</label>
+      <select id="sltAdmin" name="sltAdmin" aria-label="Default select example" cSelect [(ngModel)]="sltAdmin">
+        <option value=0 >No</option>
+        <option value=1 >Yes</option>
+      </select>
+      <c-form-feedback [valid]="false"
+        >Please provide a valid zip.</c-form-feedback
+      >
+    </c-col>
+    <c-col [xs]="12">
+      <button cButton class="me-1" color="primary" type="submit">
+        Add
+      </button>
+      <button cButton color="secondary" type="reset">Reset</button>
+    </c-col>
+  </form>

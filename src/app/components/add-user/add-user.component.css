@@ -1,0 +1,14 @@
+.user-list{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 0px 0px;
+    width: 100%;
+}
+.user-list-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heading-color{
+    color: #32b95f;
+}

@@ -1,0 +1,36 @@
+.user-list {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px 0px 0px;
+  width: 100%;
+}
+.user-list-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text_admin_user {
+  color: #16582c;
+  font-weight: bold;
+}
+.heading-color {
+  color: #4f5d73;
+}
+@media only screen and (max-width: 800px) {
+  .hidden-is-small-md {
+    display: none;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .hidden-is-small-sm {
+    display: none;
+  }
+}
+@media only screen and (max-width: 460px) {
+    .hidden-is-small-s {
+      display: none;
+    }
+  }
+.table-over-scroll{
+  overflow-x: auto;
+}
